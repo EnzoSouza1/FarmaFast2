@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmaFast</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function mostrarResultados(event) {
+            event.preventDefault();
+            document.querySelector(".results-section").style.display = "block";
+        }
+
+        function voltarAoInicio() {
+            document.querySelector(".results-section").style.display = "none";
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>FarmaFast</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="voltarAoInicio()">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="home-section">
+        <h2>Bem-vindo ao FarmaFast!</h2>
+        <p>O FarmaFast é sua plataforma online para encontrar medicamentos com facilidade e rapidez.</p>
+        <h3>Encontre seus medicamentos rapidamente!</h3>
+        <form onsubmit="mostrarResultados(event)">
+            <input type="text" placeholder="Digite o nome do medicamento..." id="search-bar">
+            <button type="submit">Buscar</button>
+        </form>
+    </section>
+
+    <section class="results-section" style="display: none;">
+        <h3>Resultados para "Paracetamol":</h3>
+        <div class="result-item">
+            <h4>Farmácia A</h4>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Preço: R$ 12,99</p>
+            <button onclick="window.open('farmaciaA.html', '_blank')">Comprar</button>
+        </div>
+        <div class="result-item">
+            <h4>Farmácia B</h4>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Preço: R$ 13,50</p>
+            <button>Comprar</button>
+        </div>
+        <div class="result-item">
+            <h4>Farmácia C</h4>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p>Preço: R$ 11,00</p>
+            <button>Comprar</button>
+        </div>
+    </section>
+
+    <section id="sobre" class="about-section">
+        <h2>Sobre</h2>
+        <p>O FarmaFast é uma plataforma que conecta você às melhores farmácias da sua região, permitindo que você encontre medicamentos com facilidade e compare preços. Nossa missão é simplificar o processo de compra de medicamentos, tornando-o rápido e conveniente.</p>
+    </section>
+
+    <section id="contato" class="contact-section">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para mais informações ou suporte. Estamos disponíveis de segunda a sexta-feira, das 9h às 18h.</p>
+        <p><strong>Email:</strong> suporte@farmafast.com</p>
+        <p><strong>Telefone:</strong> (11) 9999-9999</p>
+        <p><strong>Endereço:</strong> Rua das Flores, 123, São Paulo - SP</p>
+    </section>
+
+    <footer>
+        <p>© 2024 FarmaFast. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
